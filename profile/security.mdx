@@ -1,14 +1,14 @@
 ---
-title: "Secure Your MyEdenred Account"
+title: "Password, PIN, and Biometric Security in MyEdenred"
 sidebarTitle: "Security"
-description: "Change your password, set up PIN and biometric unlock, and manage multi-factor authentication settings in MyEdenred."
+description: "Change your MyEdenred password, configure your app PIN, and enable biometric unlock. Understand how sessions work on mobile and web."
 ---
 
-MyEdenred protects your account with multiple layers of security: a strong password for initial login, multi-factor authentication (MFA) to periodically re-verify your identity, and a device-level PIN or biometric unlock so you can open the app quickly without entering your full credentials every time. Understanding how these layers work together helps you stay in control of your account.
+MyEdenred protects your account with several security layers: a password for login, and a device-level PIN or biometric unlock so you can open the app quickly without entering your full credentials every time. Understanding how these layers work together helps you stay in control of your account.
 
 ## Changing Your Password
 
-You can update your password at any time from your profile. You'll need to know your current password to authorise the change — no additional SMS or email confirmation is required.
+You can update your password at any time from your profile. You'll need to know your current password to authorise the change.
 
 <Steps>
   <Step title="Go to Profile → Change Password">
@@ -24,10 +24,6 @@ You can update your password at any time from your profile. You'll need to know 
     Tap **Save**. A confirmation message appears when the change is successful.
   </Step>
 </Steps>
-
-<Warning>
-  When you change your password, **all active sessions on other devices are immediately invalidated**. Anyone logged in to your account on another device will be signed out and required to log in again with the new password. Your current session on the device where you made the change remains active.
-</Warning>
 
 ## PIN Unlock
 
@@ -83,16 +79,16 @@ Go to **Preferences → Settings** and toggle biometric unlock on or off. You ca
   Enable biometric unlock for the fastest and most secure way to open the app — you get strong protection without the friction of typing a code every time.
 </Tip>
 
-## Session Management and MFA
+## How Sessions Work
 
 Understanding how sessions work across mobile and web helps you know when you'll be asked to re-authenticate.
 
 <CardGroup cols={2}>
   <Card title="Mobile App" icon="mobile">
-    Your mobile session **never expires due to inactivity**. The PIN or biometric lock protects the app locally. MFA (SMS one-time password) is required once every **180 days** to re-verify your identity, even if you haven't logged out.
+    Your mobile session **never expires due to inactivity**. The PIN or biometric lock protects the app locally. To fully end a session on mobile, you must log out explicitly.
   </Card>
   <Card title="Web Portal" icon="browser">
-    Web sessions expire automatically after **60 minutes of inactivity**, redirecting you to the login screen. MFA (email one-time password) is required at each new session, or every **90 days** if you choose to trust your browser.
+    Web sessions expire automatically after a period of inactivity, redirecting you to the login screen. You'll need to log in again with your email and password to continue.
   </Card>
 </CardGroup>
 
@@ -113,5 +109,5 @@ Logging out explicitly ends your session and removes local PIN/biometric access,
 </Steps>
 
 <Note>
-  Logging out from one device does **not** affect your sessions on other devices. Each device maintains its own session. To revoke access on all devices at once, change your password — this invalidates all other active sessions immediately.
+  Logging out on mobile clears your local PIN and biometric unlock on that device. Your Edenred cards and benefits are not affected — they remain active and usable regardless of your session status.
 </Note>

@@ -1,5 +1,5 @@
 ---
-title: "View and Manage User Cards and Products"
+title: "View and Manage User Cards and Wallets in the Backoffice"
 sidebarTitle: "Cards & Products"
 description: "Inspect a user's linked Edenred cards and wallets from the Backoffice, view associated users, and assist with product-related support cases."
 ---
@@ -23,13 +23,13 @@ Each product card displays:
 | Field | Description |
 |---|---|
 | **Product name** | E.g. Cartão Refeição, Cartão Flexível, Wallet Creche, Wallet Educação |
-| **Product type** | Card (physical, backed by Novo Banco) or Wallet (digital, backed by Paytec) |
+| **Product type** | Card (physical) or Wallet (digital) |
 | **Card number / Wallet ID** | 16-digit number for cards; alphanumeric ID for wallets |
 | **Status** | Active or Blocked |
 | **Current balance** | Live balance pulled from the respective backend system |
 
 <Note>
-  Balance and status data is retrieved in real time from the backend systems (Novo Banco for cards, Paytec for wallets). If a balance appears stale or inconsistent, the issue lies upstream — the Backoffice displays what the backend returns.
+  Balance and status data is retrieved in real time from the financial systems that manage each product type. If a balance appears stale or inconsistent, the issue lies with the upstream financial platform — the Backoffice displays exactly what it receives.
 </Note>
 
 ---
@@ -55,7 +55,7 @@ Each product card displays:
     - **Amount** (debit or credit)
     - **Transaction status**
 
-    Use this view to verify whether a specific payment went through, identify unexpected charges, or confirm a balance top-up was received. Transaction data is fetched directly from Novo Banco (cards) or Paytec (wallets).
+    Use this view to verify whether a specific payment went through, identify unexpected charges, or confirm a balance top-up was received.
 
     <Note>
       You are viewing the transaction history in a read-only, support context. You cannot reverse, void, or dispute transactions from the Backoffice. Financial operations must be escalated to Edenred's operations team.
@@ -72,7 +72,7 @@ Each product card displays:
         Use the **Block** or **Unblock** action button on the product detail screen.
       </Step>
       <Step title="Confirm the action">
-        Confirm your intent in the confirmation dialog. The status change is sent immediately to Novo Banco (for cards) or Paytec (for wallets) and takes effect in real time — the product cannot be used for transactions while blocked.
+        Confirm your intent in the confirmation dialog. The status change takes effect in real time — the product cannot be used for transactions while blocked.
       </Step>
     </Steps>
 
@@ -155,14 +155,14 @@ There are deliberate boundaries on what the Backoffice can do with products. The
 
 ---
 
-## Backend systems and financial operations
+## Financial platform limitations
 
 The Backoffice shows product status and balance as reported by the underlying financial platforms — it does not process any financial operations itself.
 
-| Product category | Backend system | What the Backoffice can do |
-|---|---|---|
-| **Cards** (Cartão Refeição, Cartão Flexível) | Novo Banco | View balance, view transactions, block/unblock, remove from account |
-| **Wallets** (Wallet Creche, Wallet Educação) | Paytec | View balance, view transactions, block/unblock, remove from account |
+| Product category | What the Backoffice can do |
+|---|---|
+| **Cards** (Cartão Refeição, Cartão Flexível) | View balance, view transactions, block/unblock, remove from account |
+| **Wallets** (Wallet Creche, Wallet Educação) | View balance, view transactions, block/unblock, remove from account |
 
 <Info>
   If a user reports an issue with benefit loading (credits not arriving on a card or wallet), this is managed by the employer's client portal and Edenred's operations team — not the MyEdenred Backoffice. Direct the user to contact Edenred Customer Support through the official support channel, or escalate internally if you are already on the support team.
