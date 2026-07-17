@@ -1,0 +1,221 @@
+---
+title: "Create and Manage User Segments for Campaigns"
+sidebarTitle: "Segments"
+description: "Group MyEdenred users into segments by product type, region, or file upload to target notifications and marketing campaigns precisely."
+---
+
+Segments are the targeting engine behind every notification campaign in the MyEdenred Backoffice. Before you can send a push notification or in-app message, you must assign it a segment — the defined group of users who will receive it. Segments can be as broad as every active user on the platform, or as precise as a handpicked list of specific product IDs. Getting your segments right is the single most important step in running a focused, effective campaign.
+
+## Access
+
+The Segments module is available to users with the **Marketing** or **Administrator** role. Operators with other roles cannot create or modify segments.
+
+## The Segment List
+
+The main Segments screen gives you a full overview of every segment that has been created on the platform.
+
+The list table displays the following columns:
+
+| Column | Description |
+|---|---|
+| **Name** | The internal label given to the segment at creation time |
+| **Description** | A short free-text summary of the segment's purpose |
+| **Type** | How the segment was built — **Filters**, **File**, or **All** |
+| **Recipients** | The total number of users currently included in the segment |
+| **Created** | The date the segment was first saved |
+
+Use the **search bar** to find a segment by name, the **filter icon** to narrow results by type or date range, and the **refresh icon** to reload the list with the latest recipient counts after a segment has finished processing.
+
+To create a new segment, click the **New** button in the top-right corner of the list.
+
+---
+
+## Creating a Segment
+
+There are three methods for building a segment. Choose the one that best matches the data you have and the audience you need to reach.
+
+<Tabs>
+  <Tab title="All Users">
+
+    The **All Users** segment targets every active MyEdenred user on the platform in a single step. No filter configuration or file upload is required.
+
+    <Steps>
+      <Step title="Open the creation flow">
+        From the Segments list, click **New**. The creation modal opens.
+      </Step>
+      <Step title="Enter a name and description">
+        Give the segment a clear internal name (for example, *All Active Users – Q3 2025*) and an optional description so your team understands its purpose at a glance.
+      </Step>
+      <Step title="Select the All Users type">
+        Choose **All** as the segment type. No additional criteria are needed.
+      </Step>
+      <Step title="Save">
+        Click **Save**. The segment is created immediately and becomes available to assign to notifications.
+      </Step>
+    </Steps>
+
+    <Warning>
+      The All Users segment includes every registered active user and can result in very large recipient counts. Sending to this segment may take significantly longer to process — in some cases up to several hours. Use this type sparingly and only when a truly platform-wide message is warranted. Prefer filter-based segments whenever possible.
+    </Warning>
+
+  </Tab>
+  <Tab title="By Filters">
+
+    Filter-based segments let you combine multiple criteria to precisely define your target audience. This is the most commonly used segment type.
+
+    <Steps>
+      <Step title="Open the creation flow">
+        From the Segments list, click **New**. The creation modal opens.
+      </Step>
+      <Step title="Enter a name and description">
+        Give the segment a meaningful internal name and an optional description.
+      </Step>
+      <Step title="Select the Filters type">
+        Choose **Filters** as the segment type. The filter panel expands below.
+      </Step>
+      <Step title="Configure your filters">
+        Apply one or more of the following criteria. All active filters are combined — a user must match every selected criterion to be included in the segment.
+
+        | Filter | Notes |
+        |---|---|
+        | **Product type** | Target users who hold a specific Edenred product (e.g., Cartão Refeição, Cartão Flexível, Wallet Creche, Wallet Educação) |
+        | **Location** | Filter by district, then drill down to municipality (concelho). Useful for regional campaigns |
+        | **Marketing opt-in** | Include only users who have explicitly opted in to receive marketing communications |
+        | **Registration status** | Filter by account state: **Active** (fully registered with a product), intermediate states (email validated but no product added, etc.), or **Suspended**. For most campaigns, use **Active** or leave this filter unset |
+        | **Registration date range** | Target users who registered within a specific window. Use the presets (last 30 days, last quarter, etc.) or set a custom date range |
+        | **Date of birth** | Filter by age range. Note: users who did not fill in their date of birth at registration are automatically excluded when this filter is active |
+
+        <Info>
+          The **gender** filter field may appear in the interface but is not reliable — gender data was removed from the registration flow and the existing data is incomplete. Do not use this filter for campaign targeting.
+        </Info>
+      </Step>
+      <Step title="Save and process">
+        Click **Save**. The segment enters a **processing** state while the platform calculates the matching user population. Processing can take several minutes depending on the size of the user base and the filters applied. The recipient count updates automatically once processing completes.
+      </Step>
+    </Steps>
+
+    <Tip>
+      Always combine the **Marketing opt-in** filter with any campaign segment unless you are sending a service-type message. This ensures your campaign reaches only users who have consented to marketing communications.
+    </Tip>
+
+  </Tab>
+  <Tab title="By File Upload">
+
+    File-based segments let you target a specific list of users you already know — for example, a list provided by a partner or the output of an external data query.
+
+    <Steps>
+      <Step title="Open the creation flow">
+        From the Segments list, click **New**. The creation modal opens.
+      </Step>
+      <Step title="Enter a name and description">
+        Give the segment a clear internal name and an optional description that references the source of the file (for example, *Galp Employees – Campaign June 2025*).
+      </Step>
+      <Step title="Select the File type">
+        Choose **File** as the segment type. The file upload panel appears.
+      </Step>
+      <Step title="Prepare your file">
+        Your upload file must be an **Excel (.xlsx) file** no larger than **15 MB**. The file should contain either a list of **Product IDs** (card or Wallet IDs) or a list of **email addresses** — one value per row. The system reads from the first populated column in the file.
+
+        <Note>
+          Only one file can be attached per segment. If you need to update the audience, you must edit the segment and re-upload a new file. Download the template from the upload panel to ensure your file is formatted correctly.
+        </Note>
+      </Step>
+      <Step title="Upload the file">
+        Click **Upload** and select your prepared .xlsx file. The system validates the file format and begins processing the list.
+      </Step>
+      <Step title="Save">
+        Once the file is accepted, click **Save**. The segment processes in the background and the recipient count populates once complete.
+      </Step>
+    </Steps>
+
+    <Warning>
+      Uploading a file with an invalid format or unsupported content will cause the segment to fail processing. Always use the provided template and verify that your file contains only Product IDs or email addresses — not both in the same file.
+    </Warning>
+
+  </Tab>
+</Tabs>
+
+---
+
+## Segment Detail
+
+Click any segment name in the list to open its detail page. The detail view shows:
+
+- **Name** and **Description**
+- **Type** — Filters, File, or All
+- **Filter criteria** applied (for filter-based segments)
+- **Total recipients** — the number of users currently matched by this segment
+- **Created** and **Last updated** dates
+
+This is also where you access all management actions for the segment.
+
+---
+
+## Editing a Segment
+
+To update a segment's filters, name, or uploaded file:
+
+<Steps>
+  <Step title="Open the segment detail">
+    Click the segment name in the list to open the detail page.
+  </Step>
+  <Step title="Click Edit">
+    Select the **Edit** action. The original creation form reopens with the existing values pre-filled.
+  </Step>
+  <Step title="Make your changes">
+    Update any field — rename the segment, add or remove filters, or re-upload a replacement file.
+  </Step>
+  <Step title="Save">
+    Click **Save**. The segment re-enters processing to recalculate the recipient population with the new criteria. The updated recipient count appears once processing finishes.
+  </Step>
+</Steps>
+
+<Warning>
+  If the segment you are editing is currently assigned to a **scheduled notification**, changing the segment filters or re-uploading its file will affect which users receive that notification when it sends. Review your active scheduled notifications before editing a shared segment.
+</Warning>
+
+---
+
+## Exporting a Segment
+
+You can export the full user list of any segment to Excel. This is useful for feeding the audience into external email marketing tools or for reporting purposes.
+
+From the segment detail page, click **Export**. The system generates an Excel file containing the list of matched users and downloads it to your browser.
+
+---
+
+## Duplicating a Segment
+
+Use the **Copy / Duplicate** action to create a new segment based on an existing one. This is the fastest way to build a variation of a segment you have already configured — for example, adding a new product filter to a segment you use regularly.
+
+<Steps>
+  <Step title="Open the segment detail">
+    Click the segment you want to copy.
+  </Step>
+  <Step title="Click Copy">
+    Select the **Copy** action. A new segment is created with all the same settings, pre-named with a copy suffix.
+  </Step>
+  <Step title="Rename and adjust">
+    Edit the duplicated segment to rename it and make any needed changes to the filters before saving.
+  </Step>
+</Steps>
+
+---
+
+## Deleting a Segment
+
+To permanently remove a segment, open its detail page and select **Delete**. You will be asked to confirm the action.
+
+<Warning>
+  You cannot delete a segment that is currently assigned to an active or scheduled notification. Unassign or cancel those notifications first, then return to delete the segment.
+</Warning>
+
+---
+
+## Using Segments in Notifications
+
+Segments on their own do nothing — they only take effect when assigned as the target audience of a notification. When you create a notification, you must select one segment from the list of available segments. The notification is then sent exclusively to the users in that segment.
+
+<Note>
+  See [Create & Send Notifications](/backoffice/notifications/create-send) for the full notification creation workflow.
+</Note>

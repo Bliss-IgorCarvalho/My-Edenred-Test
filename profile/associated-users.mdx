@@ -1,0 +1,110 @@
+---
+title: "Share Card Access with Associated Users"
+sidebarTitle: "Associated Users"
+description: "Grant a family member read-only access to your Edenred card balance and transactions. Manage associated user requests and permissions."
+---
+
+MyEdenred lets you share view access to your Edenred card with another person — for example, a spouse or partner — by adding them as an **associated user**. Once approved, the associated user can see your card's balance and transaction history directly in their own MyEdenred account, without needing to share your login credentials.
+
+## What an Associated User Can and Cannot Do
+
+<CardGroup cols={2}>
+  <Card title="What they CAN do" icon="circle-check">
+    - View your card balance
+    - View your full transaction history
+  </Card>
+  <Card title="What they CANNOT do" icon="circle-xmark">
+    - Block or unblock the card
+    - Change the card PIN
+    - Make payments or top-ups
+    - Modify any account settings
+  </Card>
+</CardGroup>
+
+<Info>
+  Associated users are only supported for **Cards**. Wallets do not support this feature. A single card can have multiple associated users.
+</Info>
+
+## How the Approval Flow Works
+
+Adding an associated user is always initiated by the person who wants access — they add your card number to their own account. Because your card already exists in the system, MyEdenred recognises this and triggers an approval request to you, the card owner.
+
+```
+Second user adds card number → System detects existing owner → Owner receives email → Owner approves or rejects → Access granted or denied
+```
+
+## For the Card Owner: Approving or Rejecting a Request
+
+When someone tries to add your card to their account, you receive an email asking you to approve or reject the request.
+
+<Steps>
+  <Step title="Check your email">
+    Look for an email from MyEdenred notifying you that someone is requesting access to your card.
+  </Step>
+  <Step title="Review the request">
+    The email shows the details of the person requesting access. Confirm this is someone you recognise and trust.
+  </Step>
+  <Step title="Approve or reject">
+    Click the appropriate link in the email. If you **approve**, the other user immediately gains read-only access to your card in their account. If you **reject**, no access is granted and the request is discarded.
+  </Step>
+</Steps>
+
+## For the Card Owner: Viewing Associated Users
+
+Once you have associated users on a card, you can review them at any time from the card detail screen.
+
+<Steps>
+  <Step title="Open the card detail">
+    Navigate to **My Benefits** and tap the card you want to manage.
+  </Step>
+  <Step title="Open the Associated Users tab">
+    Tap the **Associated Users** tab in the card detail screen. The list shows each associated user's name, email address, and the date they were added.
+  </Step>
+</Steps>
+
+## For the Card Owner: Removing an Associated User
+
+If you want to revoke someone's access to your card, you can remove them directly from the card detail screen.
+
+<Steps>
+  <Step title="Open the card detail and go to Associated Users">
+    Navigate to **My Benefits**, tap your card, and open the **Associated Users** tab.
+  </Step>
+  <Step title="Tap Remove next to the user">
+    Find the associated user you want to remove and tap **Remove**.
+  </Step>
+  <Step title="Access is revoked immediately">
+    The card disappears from the removed user's account straight away. No additional confirmation from the associated user is required.
+  </Step>
+</Steps>
+
+<Warning>
+  Removing an associated user is **immediate and cannot be undone** from their side. The card vanishes from their account the moment you remove them. If you want to restore their access later, they will need to go through the request-and-approval flow again.
+</Warning>
+
+## For the Second User: Requesting Access to a Card
+
+If you want to view someone else's Edenred card in your account, add the card number just as you would add any card to your account.
+
+<Steps>
+  <Step title="Go to Add Card">
+    Navigate to **My Benefits → Add Card** in your account.
+  </Step>
+  <Step title="Enter the card number">
+    Type the card number belonging to the other person. MyEdenred detects that this card is already registered to another account and triggers the approval flow automatically.
+  </Step>
+  <Step title="Wait for the owner's approval">
+    The card appears in your account immediately — but greyed out, with no balance or transaction data visible, and labelled **"Pending permission"**. You cannot do anything with the card until the owner approves the request.
+  </Step>
+  <Step title="Access granted">
+    Once the card owner approves your request via the email they receive, the card becomes active in your account with full read-only access.
+  </Step>
+</Steps>
+
+## Understanding Pending Request States
+
+| Status | What it means |
+|---|---|
+| **Pending permission** (greyed out) | The card owner has not yet responded to the access request. Balance and transactions are not visible. |
+| **Active** | The card owner approved the request. You can view balance and transactions in read-only mode. |
+| **Rejected / Removed** | The owner rejected or later removed your access. The card is no longer visible in your account. |

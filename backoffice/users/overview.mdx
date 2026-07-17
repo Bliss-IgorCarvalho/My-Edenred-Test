@@ -1,0 +1,153 @@
+---
+title: "Search and Manage MyEdenred End Users"
+sidebarTitle: "User Search"
+description: "Search, filter, and export the full MyEdenred user base. View user profiles, activity logs, and manage account status from the Backoffice."
+---
+
+The **Users** section gives Customer Support agents and Administrators a complete, real-time view of every MyEdenred end-user account. From here you can locate any user in seconds, inspect their full profile, take support actions on their account, and review their activity history — all in one place, without needing to contact other teams or access backend systems directly.
+
+<Info>
+  The Users section is available to the **Administrator**, **Administrator Call Center**, and **Call Center** roles. Marketing operators do not have access to individual user records.
+</Info>
+
+---
+
+## Finding users
+
+### Search and filter
+
+The user list opens with a paginated table showing all registered MyEdenred accounts. Use the search bar and filters to narrow down to the user you need.
+
+**Search by:**
+- Full name or partial name
+- Email address
+- NIF (tax identification number)
+- Product ID — a card number (16 digits) or Wallet ID
+
+**Filter by:**
+- **Product type** — Cartão Refeição, Cartão Flexível, Wallet Creche, Wallet Educação
+- **Region / postcode** — to scope results geographically
+- **Account status** — Active, Suspended, Awaiting email validation, Awaiting product addition, Awaiting opt-in, Awaiting re-add card, Awaiting additional information
+- **Opt-in status** — whether the user has consented to marketing communications
+
+The table columns give you a quick read: **Name**, **Registration date**, **Last login**, **Status**, and **Marketing opt-in**.
+
+<Tip>
+  If you are searching by product, use the full card number or Wallet ID for precise results. Partial product ID searches may return a large number of results in a database with over one million accounts.
+</Tip>
+
+### Exporting the list
+
+After applying your search criteria and filters, click **Export** to download the current filtered view as an Excel file. This is useful for reporting, audits, or handing off a list of affected users to another team.
+
+<Note>
+  The export reflects the currently applied filters. Always verify your filters before exporting to avoid downloading a larger dataset than intended.
+</Note>
+
+---
+
+## User profile
+
+Click any row in the user list to open that user's full profile. The profile page is organised into tabs — each covering a different aspect of the account.
+
+### Personal details
+
+The profile header and details panel show:
+
+| Field | Notes |
+|---|---|
+| **Name** | Full name as registered |
+| **Email** | Login email address |
+| **Phone number** | Mobile number used for OTP verification |
+| **NIF** | Portuguese tax identification number |
+| **Date of birth** | As provided at registration |
+| **Postcode** | Used for regional segmentation |
+| **Account status** | Current state of the account (see statuses below) |
+| **Registration date** | When the account was created |
+| **Last login** | Timestamp of the most recent authenticated session |
+| **Consent settings** | Marketing opt-in toggles and data consent status |
+
+### Account statuses
+
+A user's account can be in one of the following states:
+
+- **Active** — registered and fully operational
+- **Suspended** — access blocked by a support operator or by Edenred
+- **Awaiting email validation** — registered but has not yet confirmed their email
+- **Awaiting product addition** — email confirmed but no product linked yet
+- **Awaiting opt-in** — pending marketing consent step
+- **Awaiting re-add card** — card was removed and user needs to re-link it
+- **Awaiting additional information** — phone number was deleted; user must re-verify at next login
+
+---
+
+## Editing a user profile
+
+Support staff can edit a limited set of personal data fields. Some fields are read-only to protect data integrity.
+
+<Tabs>
+  <Tab title="Editable fields">
+    You can update the following fields directly from the profile edit form:
+
+    - **Name** (first name and last name)
+    - **Email address**
+    - **Date of birth**
+    - **Postcode**
+    - **Marketing opt-in** toggles
+
+    After making changes, click **Save** to apply them. The update is recorded in the activity log with the **backoffice** channel tag.
+  </Tab>
+  <Tab title="Read-only fields">
+    The following fields are displayed for reference but cannot be edited by support staff:
+
+    - **NIF** — immutable identifier; changes require a backend process
+    - **Account status** (changed via dedicated actions — Suspend/Reactivate — not via the edit form)
+    - **Registration date** and **Last login** — system-generated timestamps
+    - **Role / profile type** — not applicable to end users
+  </Tab>
+  <Tab title="Special actions">
+    In addition to field edits, the profile page gives you dedicated action buttons for support tasks:
+
+    | Action | What it does |
+    |---|---|
+    | **Re-send validation email** | Sends another email confirmation link — useful if the user never received or lost the original |
+    | **Send password recovery email** | Triggers a password reset email to the user's registered address |
+    | **Suspend account** | Immediately blocks the user from logging in; the account record is preserved |
+    | **Reactivate account** | Restores access for a suspended user |
+    | **Delete phone number** | Removes the verified phone number; the user is placed in **Awaiting additional information** state and must re-verify a new number at next login |
+
+    <Warning>
+      Deleting a phone number cannot be undone from the Backoffice. The user themselves must verify a new number on their next login. Use this action only when explicitly required for a support case.
+    </Warning>
+  </Tab>
+</Tabs>
+
+---
+
+## Activity log
+
+Every user profile includes an **Activity** tab that shows a full, timestamped record of events on that account. Use this log to investigate support cases, verify what actions have been taken, and determine the source of any issue.
+
+### What the log shows
+
+Each entry in the activity log includes:
+
+- **Date and time** — exact timestamp of the event
+- **Event type** — for example: login, logout, email confirmation, password change, product added, payment made, card blocked, associated user added
+- **Channel** — the interface through which the action was taken: `app`, `web`, or `backoffice`
+
+### Filtering the activity log
+
+You can narrow the log using these filters:
+
+- **Activity type** — select one or more event types
+- **Date range** — restrict to a specific period
+- **Channel** — filter to see only app actions, web actions, or Backoffice interventions
+
+<Note>
+  Any action you or another Backoffice operator takes on a user's account is recorded with the **`backoffice`** channel tag in the activity log. This makes it straightforward to distinguish end-user actions from operator interventions during a support investigation.
+</Note>
+
+<Info>
+  The current activity log records the channel of each action but does not yet display the individual operator who performed a Backoffice action. If you need to identify a specific operator, escalate to your Administrator, who can consult the underlying system audit records.
+</Info>

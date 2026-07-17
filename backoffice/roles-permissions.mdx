@@ -1,0 +1,154 @@
+---
+title: "Backoffice Roles and Access Permissions"
+sidebarTitle: "Roles & Permissions"
+description: "Understand the three Backoffice roles — Administrator, Call Center, and Marketing — and what each can access and manage."
+---
+
+The MyEdenred Backoffice uses role-based access control to ensure that every operator can only reach the areas relevant to their day-to-day work. Roles are assigned when a Backoffice account is created and can only be changed by an Administrator. Permissions are fixed by the system — they are not individually configurable.
+
+## Role overview
+
+| Role | Access |
+|---|---|
+| **Administrator** | Full access to all Backoffice areas |
+| **Administrator Call Center** | User Management and Collaborator Management |
+| **Call Center** | User Management only |
+| **Marketing** | Notifications, Segments, and Content (CMS) |
+
+<Info>
+  Both Edenred's internal Customer Support team and external Contact Center partners use the Backoffice. External agents are assigned the **Call Center** role, giving them access to User Management only.
+</Info>
+
+## What each role can do
+
+<Tabs>
+  <Tab title="Administrator">
+    As an Administrator, you have unrestricted access to every section of the Backoffice. Your responsibilities typically include:
+
+    - **User Management** — search, view, edit, suspend, and reactivate MyEdenred end-user accounts
+    - **Notifications** — create, schedule, and send push and in-app notification campaigns
+    - **Segments** — build and manage user segments for targeted communications
+    - **Content (CMS)** — manage banners, highlights, perks, FAQs, and legal documents
+    - **Collaborator Management** — create, edit, suspend, and delete Backoffice operator accounts
+    - **Role assignment** — set and change roles for all Backoffice collaborators
+    - **Password management** — reset passwords for any Backoffice collaborator who cannot log in
+
+    <Tip>
+      As an Administrator, you are responsible for the health and security of all Backoffice operator accounts. Deactivate accounts promptly when a collaborator leaves or changes role.
+    </Tip>
+  </Tab>
+  <Tab title="Administrator Call Center">
+    As an Administrator Call Center, you have access to operational support areas and team management:
+
+    - **User Management** — full access to search, view, edit, suspend, and reactivate MyEdenred end-user accounts
+    - **Collaborator Management** — create and manage Backoffice operator accounts within your team's scope
+    - All the same user-facing support actions as the Call Center role (see below)
+
+    <Note>
+      The Administrator Call Center role is designed for team leads or supervisors who need to manage their agents' accounts in addition to handling user support cases.
+    </Note>
+  </Tab>
+  <Tab title="Call Center">
+    As a Call Center operator, you work exclusively in the **User Management** section. Your access includes:
+
+    - Search for MyEdenred end-user accounts by name, email, NIF, or card/wallet number
+    - View complete user profiles including personal details, account status, and consent settings
+    - Edit personal data (name, email, date of birth, postcode)
+    - Send a password recovery email or re-send the email validation message
+    - Suspend or reactivate a user account
+    - Delete a user's phone number (the user will be prompted to re-verify a new number at next login)
+    - View all cards and wallets linked to a user's account
+    - Block or unblock a user's card or wallet
+    - Remove a product from a user's account
+    - View the user's associated users and remove them if needed
+    - Review the timestamped activity log for any user
+
+    <Warning>
+      You cannot initiate payments, change PINs, or perform any financial operation on behalf of a user. If a card or wallet requires financial intervention, this must be escalated to Edenred's backend teams.
+    </Warning>
+  </Tab>
+  <Tab title="Marketing">
+    As a Marketing operator, you work in the communications and content areas of the Backoffice. Your access includes:
+
+    - **Notifications** — create, configure, and send push and in-app notification campaigns to selected user segments
+    - **Segments** — create and manage user segments by applying filters (product type, region, account status, opt-in) or by uploading a file with product IDs or email addresses
+    - **Content (CMS)** — manage banners, carousel highlights, perks and advantages, FAQs, and legal documents displayed in the MyEdenred app and web portal
+
+    <Note>
+      The Marketing role does not give you access to individual user accounts or personal data. Segment creation works on aggregated groups — you define the audience without viewing individual user records.
+    </Note>
+  </Tab>
+</Tabs>
+
+---
+
+## Managing collaborator accounts
+
+Only **Administrators** (and Administrator Call Center, within their scope) can create and manage Backoffice operator accounts.
+
+### Creating a new collaborator
+
+<Steps>
+  <Step title="Go to Collaborators">
+    In the main navigation, open the **Collaborators** section.
+  </Step>
+  <Step title="Click New">
+    Click the **New** button at the top of the collaborator list.
+  </Step>
+  <Step title="Fill in the account details">
+    Complete the creation form:
+
+    - **Name** — the collaborator's full display name
+    - **Username** — the login identifier (not an email address)
+    - **Password** — set a temporary password manually or use the auto-generate option
+    - **Role** — select one of: Administrator, Administrator Call Center, Call Center, Marketing
+
+    <Note>
+      There is no email activation flow. The account is created in an **active** state immediately. Share the credentials with the collaborator securely and instruct them to change their password from their profile on first login.
+    </Note>
+  </Step>
+  <Step title="Save">
+    Click **Save**. The new collaborator appears in the list and can log in right away.
+  </Step>
+</Steps>
+
+### Searching and filtering collaborators
+
+The collaborator list gives you a table with these columns: **Name**, **Role**, **Registration date**, **Last login**, and **Status**. Use the available filters to narrow the list:
+
+- **Role** — filter by Administrator, Administrator Call Center, Call Center, or Marketing
+- **Status** — Active or Suspended
+- **Registration date** — date range picker
+- **Last login** — date range picker
+
+### Editing a collaborator
+
+Click any collaborator's name to open their detail page. From here you can:
+
+- **Edit** their name, username, password, or role
+- **Suspend** their account to immediately block access without deleting the record
+- **Delete** their account to permanently remove it from the system
+
+<Warning>
+  Deleting a collaborator account is irreversible. If the person may return or the account may be needed for audit purposes, prefer **Suspend** over **Delete**.
+</Warning>
+
+### Resetting a password
+
+If a collaborator is locked out, open their detail page and use the **Edit** action to set a new password manually. There is no automated password recovery flow for Backoffice accounts — the Administrator is the only recovery path.
+
+---
+
+## Managing your own profile
+
+Any Backoffice collaborator — regardless of role — can view and update their own profile from the account menu in the top navigation bar.
+
+From your profile screen you can:
+
+- View your **name**, **username**, and assigned **role** (role is read-only — only an Administrator can change it)
+- Edit your **name** and **username**
+- Change your **password**
+
+<Tip>
+  Update your password regularly and never share it with colleagues. If you believe your credentials have been compromised, contact your Administrator immediately to have your password reset.
+</Tip>

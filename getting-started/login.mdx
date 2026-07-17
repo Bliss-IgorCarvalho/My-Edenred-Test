@@ -1,0 +1,102 @@
+---
+title: "Log In to MyEdenred Securely"
+sidebarTitle: "Log In"
+description: "Sign in to MyEdenred with your email and password. Multi-factor authentication via OTP keeps your benefits account protected."
+---
+
+Signing in to MyEdenred requires your registered email address and password. To protect your benefits account, MyEdenred also uses multi-factor authentication (MFA) — a second verification step via a one-time passcode (OTP) — at regular intervals. The exact method and frequency of MFA depends on whether you're using the mobile app or the web portal.
+
+## Log in to your account
+
+<Steps>
+  <Step title="Open the login screen">
+    Launch the MyEdenred app or visit the web portal. On the login screen, enter the **email address** and **password** you set during registration.
+  </Step>
+  <Step title="Submit your credentials">
+    Tap or click **Log in**. If your credentials are correct, MyEdenred checks whether MFA is required for this session.
+  </Step>
+  <Step title="Complete multi-factor authentication (when prompted)">
+    Depending on your platform and how long it has been since your last verified login, you may be asked to enter a one-time passcode. See the [MFA section](#multi-factor-authentication) below for full details.
+  </Step>
+  <Step title="Access your dashboard">
+    After successful authentication you are taken to the home dashboard, where you can view your products, balances, and transactions.
+
+    <Note>
+      If your account has no products linked, you will not be able to access the dashboard. Instead, you'll be directed to the [add-product flow](/getting-started/add-product) and must link at least one Edenred product before continuing.
+    </Note>
+  </Step>
+</Steps>
+
+<Warning>
+  MyEdenred always uses the **most recently validated** email address on your account. If you have requested an email change but haven't clicked the confirmation link in the verification email yet, your old email address is still the one in use. **Keep logging in with your previous email until the change is fully confirmed.**
+</Warning>
+
+## Multi-factor authentication
+
+MFA adds a second layer of security to your account. After entering your email and password, you may be asked to verify your identity with a one-time passcode. The delivery method and session rules differ between mobile and web.
+
+<Tabs>
+  <Tab title="Mobile App">
+    On the mobile app, MFA is delivered via **SMS to your registered mobile number**.
+
+    - You receive a 5-digit OTP by SMS.
+    - Enter the code on the verification screen. Codes are valid for **10 minutes**.
+    - If you don't receive the SMS, tap **Resend code**. You can request a new code once every **60 seconds**. Requesting a new code immediately invalidates any previously sent code.
+    - After **3 incorrect attempts**, the verification is locked for **15 minutes** and then unlocks automatically.
+
+    **Session behaviour on mobile:**
+    - Your mobile session is **always-on** — it never expires due to inactivity. You stay logged in until you explicitly sign out.
+    - MFA is requested **once every 180 days**. After a successful MFA verification, you won't be prompted again for the next 180 days.
+  </Tab>
+  <Tab title="Web Portal">
+    On the web portal, MFA is delivered via **email OTP to your registered email address**.
+
+    - You receive a 5-digit OTP by email.
+    - Enter the code on the verification screen. Codes are valid for **10 minutes**.
+    - If you don't receive the email, request a resend — you can do this once every **60 seconds**. Any newly sent code immediately invalidates the previous one.
+    - After **3 incorrect attempts**, the verification is locked for **15 minutes** and then unlocks automatically.
+
+    **Trusted browser option:**
+    During MFA on the web, you can check **Trust this browser** to skip MFA on your next logins from the same browser. A trusted browser remains exempt from MFA for **90 days**. After that, you'll be asked to complete MFA again. Only trust browsers on devices you own and control.
+  </Tab>
+</Tabs>
+
+## PIN and biometric unlock (mobile)
+
+After your first successful login on a mobile device, you can use your **PIN** or **biometrics** (fingerprint or Face ID) to open the app quickly on subsequent visits without re-entering your full password.
+
+- You set up your PIN during the initial registration onboarding. You can update it at any time from your profile settings.
+- Biometric unlock uses the fingerprint or face recognition already configured on your device. Enable it from your profile settings.
+- PIN and biometric unlock are a convenience layer on top of your main credentials — they do not replace the periodic MFA check, which still runs every 180 days in the background.
+
+## Recover your password
+
+If you've forgotten your password, you can reset it directly from the login screen.
+
+<Steps>
+  <Step title="Tap 'Recover password' on the login screen">
+    Below the login form you'll find the **Recover password** link. Tap or click it.
+  </Step>
+  <Step title="Enter your email address">
+    Type the email address associated with your MyEdenred account and confirm the request.
+  </Step>
+  <Step title="Check your inbox for the recovery link">
+    MyEdenred sends a password reset link to your email address. The link is valid for **24 hours**.
+
+    <Note>
+      If you enter an email that isn't registered, the app shows a neutral confirmation message — it does not reveal whether an account exists for that address. This is a security measure to protect all users.
+    </Note>
+  </Step>
+  <Step title="Click the link and set a new password">
+    Open the email and click the reset link. You'll be taken to a screen where you can enter and confirm your new password. Follow the on-screen password requirements.
+
+    If the link has expired before you use it, return to the login screen and request a new recovery email.
+  </Step>
+  <Step title="Log in with your new password">
+    After a successful reset, you are redirected to the login screen. Sign in with your email and your newly created password.
+  </Step>
+</Steps>
+
+<Tip>
+  Can't find the recovery email? Check your spam or junk folder. The message is sent from an Edenred address and may be filtered by some email providers.
+</Tip>

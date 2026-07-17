@@ -1,0 +1,234 @@
+---
+title: "Manage Legal Documents, FAQs, and App Content"
+sidebarTitle: "Legal Documents"
+description: "Update terms and conditions, privacy policy, product FAQs, and app interface strings through the MyEdenred Backoffice CMS."
+---
+
+The Content Management section of the Backoffice covers all static and legal content displayed within the MyEdenred app and web portal. This includes the legal documents users must accept, product-specific FAQs and conditions, the general support FAQ, contact page details, and every text string visible in the app interface. Changes you make here are reflected in the app without requiring a new software release, giving you direct control over how information is presented to users at any time.
+
+## Access
+
+All sections described on this page are available to users with the **Administrator** role only. Marketing operators do not have access to legal and CMS content.
+
+---
+
+## Legal Documents
+
+The Legal Documents section manages the two foundational legal texts that all MyEdenred users must accept:
+
+- **Terms & Conditions** — the terms of use for the MyEdenred application
+- **Privacy Policy** — the data privacy notice for the platform
+
+### Viewing and Editing a Legal Document
+
+<Steps>
+  <Step title="Navigate to Legal Documents">
+    Go to **Content → Legal Documents** in the Backoffice sidebar. A list appears showing both documents with their last updated dates.
+  </Step>
+  <Step title="Open the document">
+    Click the document you want to update (Terms & Conditions or Privacy Policy) to open the detail and editing view.
+  </Step>
+  <Step title="Edit the content">
+    The document opens in a rich text editor. Make your changes — update clauses, correct language, or add new sections as required.
+  </Step>
+  <Step title="Publish the changes">
+    Click **Save** or **Publish** to apply the update. The updated document becomes the live version that users see in the app.
+  </Step>
+</Steps>
+
+<Warning>
+  When you update the **Terms & Conditions**, users will be prompted to read and accept the new version the next time they log in to the app. This is a mandatory acceptance flow — users cannot continue using the app until they accept. Do not publish T&C changes lightly or without proper legal review and approval outside the Backoffice.
+</Warning>
+
+<Note>
+  Legal validation of the document content is handled outside the Backoffice by Edenred's legal team. The Backoffice is the publication tool only. Always ensure the final approved text has been reviewed by the appropriate team before publishing.
+</Note>
+
+---
+
+## Product FAQs and Conditions
+
+Each Edenred product has its own dedicated FAQ section and Conditions document within the app. You manage these per-product contents separately.
+
+The four products with individual CMS pages are:
+
+<CardGroup cols={2}>
+  <Card title="Cartão Refeição" icon="utensils">
+    The Edenred meal card — FAQs and general conditions specific to meal card holders.
+  </Card>
+  <Card title="Cartão Flexível" icon="credit-card">
+    The flexible benefit card — FAQs and conditions for flexible card users.
+  </Card>
+  <Card title="Wallet Creche" icon="baby">
+    The childcare wallet — FAQs and conditions for users with a nursery benefit wallet.
+  </Card>
+  <Card title="Wallet Educação" icon="graduation-cap">
+    The education wallet — FAQs and conditions for users holding an education benefit wallet.
+  </Card>
+</CardGroup>
+
+### Editing Product Conditions
+
+<Steps>
+  <Step title="Select the product">
+    Go to **Content → Product Content** and use the product dropdown to select the product whose content you want to edit.
+  </Step>
+  <Step title="Open the Conditions editor">
+    Click **Edit General Conditions**. The conditions document opens in the text editor.
+  </Step>
+  <Step title="Set the validity date">
+    Conditions documents include a **validity date** field. Update this to reflect when the current version comes into effect.
+  </Step>
+  <Step title="Edit and save">
+    Make your changes in the editor and click **Save** to publish the updated conditions to the app.
+  </Step>
+</Steps>
+
+<Tip>
+  The rich text editor works best with clean plain text input. If you are copying content from a Word document, paste it as plain text first (using your text editor's paste-without-formatting option), then apply the desired formatting in the editor. Pasting directly from Word can introduce invisible characters that break the layout.
+</Tip>
+
+### Managing Product FAQs
+
+Each product also has its own list of Frequently Asked Questions. These appear in the product's dedicated section of the app.
+
+<Steps>
+  <Step title="Select the product">
+    On the Product Content screen, select the relevant product from the dropdown.
+  </Step>
+  <Step title="Manage FAQ entries">
+    The FAQ list shows all questions for that product with their current status (Published or Suspended). From here you can:
+
+    | Action | Description |
+    |---|---|
+    | **Create new** | Add a new FAQ entry. Enter the question, the answer, and set the initial status |
+    | **Edit** | Update the question text or answer for an existing FAQ |
+    | **Reorder** | Change the display order of questions. Use the reorder controls to move a question to the top of the list or adjust its position |
+    | **Suspend** | Hide a question from users without deleting it. Suspended questions remain in the Backoffice and can be republished |
+    | **Delete** | Permanently remove an FAQ entry |
+  </Step>
+</Steps>
+
+<Note>
+  Product FAQs do not support categories — all questions for a product appear in a single flat list, ordered as you configure them. If you need to group questions by topic, use clear question wording to create a logical reading order.
+</Note>
+
+---
+
+## Global FAQs
+
+The Global FAQs section manages the general support questions shown in the app's main support or contact area, separate from product-specific FAQs. Global FAQs are organised into categories that users can browse.
+
+### Managing FAQ Categories
+
+<Steps>
+  <Step title="Navigate to Global FAQs">
+    Go to **Content → Global FAQs** in the Backoffice sidebar.
+  </Step>
+  <Step title="Open the Categories section">
+    Access the category management panel.
+  </Step>
+  <Step title="Create, edit, or delete categories">
+    - **Create**: Enter a category name and save. The new category becomes available when adding FAQ entries.
+    - **Edit**: Click an existing category to rename it.
+    - **Delete**: Remove a category. Reassign any FAQs in that category first to avoid orphaned entries.
+  </Step>
+</Steps>
+
+### Creating and Managing FAQ Entries
+
+<Steps>
+  <Step title="Click Create New FAQ">
+    Select **Create New** from the Global FAQs list. The creation form opens.
+  </Step>
+  <Step title="Enter the question and answer">
+    Write the **question** as a user would ask it, and provide a clear, concise **answer**. Link to other sections of the app or external resources using the answer text field.
+  </Step>
+  <Step title="Assign a category">
+    Select the appropriate category from the dropdown to ensure the FAQ appears under the correct heading in the app.
+  </Step>
+  <Step title="Set the status">
+    Choose to **Publish** the FAQ immediately or **Save** it without publishing to queue it for review.
+  </Step>
+  <Step title="Save">
+    Click **Save**. Published FAQs appear in the app's support section immediately.
+  </Step>
+</Steps>
+
+You can also **reorder** questions within a category, **edit** or **suspend** existing entries from the FAQ list at any time.
+
+---
+
+## Contact Page
+
+The Contact Page section manages the support contact details shown in the app's Support section. Users see these details when they need to reach Edenred customer support.
+
+### Editing Contact Details
+
+<Steps>
+  <Step title="Navigate to Contact Page">
+    Go to **Content → Contact Page** in the Backoffice sidebar.
+  </Step>
+  <Step title="Click Edit">
+    Select the **Edit** action. The contact fields become editable.
+  </Step>
+  <Step title="Update the details">
+    Edit the following fields as needed:
+
+    | Field | Description |
+    |---|---|
+    | **Phone number** | The customer support telephone number |
+    | **Email address** | The support email address |
+    | **Website** | The Edenred Portugal website URL |
+    | **Image** | An optional supporting image displayed on the contact page |
+  </Step>
+  <Step title="Save">
+    Click **Save**. Updated contact details appear in the app immediately.
+  </Step>
+</Steps>
+
+---
+
+## App Strings
+
+The App Strings module gives you control over every text string displayed in the MyEdenred app and web portal — button labels, error messages, placeholder text, section titles, and more. You can update these strings without requiring a new app release, which means you can fix typos, update terminology, or adjust messaging in real time.
+
+### Browsing and Searching Strings
+
+<Steps>
+  <Step title="Navigate to App Strings">
+    Go to **Content → App Strings** in the Backoffice sidebar.
+  </Step>
+  <Step title="Filter by channel">
+    Use the channel filter to view strings specific to **Mobile**, **Web**, or both. The list is extensive — filtering by channel helps you focus on the right set of strings.
+  </Step>
+  <Step title="Search for a string">
+    Use the search bar to find a string by **keyword** (the visible text) or by **variable name** (the internal identifier used in the code). Searching by variable name is the fastest way to locate a specific string if you know its identifier.
+  </Step>
+</Steps>
+
+### Editing a String
+
+<Steps>
+  <Step title="Locate the string">
+    Find the string you want to update using search or by browsing the list.
+  </Step>
+  <Step title="Edit the value">
+    Click the string value field and type the updated text directly.
+  </Step>
+  <Step title="Save">
+    Confirm the change. The updated string propagates to the app.
+  </Step>
+</Steps>
+
+<Warning>
+  There is currently **no character limit enforced** on string values. Entering text that is significantly longer than the original can break the app layout — particularly on mobile screens where space is constrained. Always check the original string length before editing and keep your replacement text to a similar length. If you are unsure how a string will render, test it on both mobile and web before publishing widely.
+</Warning>
+
+---
+
+## Propagation Times
+
+<Note>
+  Changes to legal documents and app strings are typically reflected in the app quickly, but a **short propagation delay** may occur before all users see the updated content. This is normal behaviour due to caching on the app and server side. If changes do not appear immediately after publishing, allow a few minutes and ask affected users to refresh the app or clear their cache.
+</Note>

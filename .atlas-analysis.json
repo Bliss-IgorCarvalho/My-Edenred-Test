@@ -1,19 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "MyEdenred",
+  "projectType": "saas",
+  "projectName": "MyEdenred",
+  "projectDescription": "MyEdenred is the mobile app and web portal that lets Edenred benefit recipients manage their meal cards, flexible cards, and digital wallets — checking balances, viewing transactions, making payments, and finding accepted merchants.",
   "theme": "almond",
-  "colors": {
-    "primary": "#E3000F",
-    "light": "#FF4D57",
-    "dark": "#B0000B"
-  },
-  "favicon": "/favicon.svg",
-  "navbar": {
-    "primary": {
-      "type": "github",
-      "href": "https://github.com/Bliss-IgorCarvalho/MyEdenred"
-    }
-  },
+  "primaryColor": "#E3000F",
+  "lightColor": "#FF4D57",
+  "darkColor": "#B0000B",
   "navigation": {
     "tabs": [
       {
@@ -100,5 +92,36 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "Balance and transaction history for Cartão Refeição, Cartão Flexível, Wallet Creche, and Wallet Educação",
+    "In-app wallet payments with OTP SMS verification",
+    "GPS and postcode-based merchant search with map view",
+    "Card blocking/unblocking and PIN management",
+    "Associated user (second cardholder) read access for cards",
+    "Push and in-app notifications",
+    "Edenred perks and promotions catalogue",
+    "Product onboarding via NIF-based card/wallet linking",
+    "PIN and biometric app unlock",
+    "Backoffice CMS for banners, FAQs, legal documents, and perks",
+    "Backoffice notification campaigns with user segmentation"
+  ],
+  "publicApiSurface": [
+    "POST /auth/login — email + password authentication with MFA OTP",
+    "POST /auth/register — new user account creation",
+    "POST /auth/password/recover — password recovery flow",
+    "GET /products — list user's Edenred products (cards + wallets)",
+    "GET /products/{id}/transactions — paginated transaction history",
+    "POST /products/{id}/block — block a card or wallet",
+    "POST /products/{id}/unblock — unblock a card or wallet",
+    "GET /merchants — merchant network list filtered by product type and location",
+    "POST /wallets/{id}/pay — initiate wallet payment to a merchant",
+    "GET /wallets/{id}/payment-profiles — list saved payment profiles",
+    "GET /notifications — in-app notification inbox",
+    "GET /perks — Edenred perks catalogue",
+    "PATCH /profile — update personal data (name, postal code, date of birth)",
+    "PUT /profile/email — update email with OTP validation",
+    "PUT /profile/phone — update phone with SMS OTP validation",
+    "DELETE /account — delete user account"
+  ]
 }

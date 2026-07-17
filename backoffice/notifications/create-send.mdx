@@ -1,0 +1,225 @@
+---
+title: "Create and Send Push Notifications to Users"
+sidebarTitle: "Create & Send"
+description: "Compose push and in-app notifications in the Backoffice, target a user segment, schedule delivery, and track campaign status."
+---
+
+The Notifications module lets you send push and in-app messages to any defined segment of MyEdenred users. Whether you are announcing a new partner perk, reminding users about a limited-time promotion, or sharing an important service update, notifications give you a direct channel to users on both the mobile app and the web portal. Every campaign you create here is logged with full delivery details so you can track its reach and status at any time.
+
+## Access
+
+The Notifications module is available to users with the **Marketing** or **Administrator** role.
+
+---
+
+## The Notification List
+
+The main Notifications screen displays all campaigns that have been created on the platform, regardless of their current state.
+
+The list table shows the following columns:
+
+| Column | Description |
+|---|---|
+| **Name** | The internal campaign name assigned at creation |
+| **Segment** | The user segment targeted by this notification |
+| **Created** | The date the notification was first saved |
+| **Send date** | The scheduled or actual send date and time |
+| **Status** | The current state of the notification |
+
+### Notification Statuses
+
+| Status | Meaning |
+|---|---|
+| **Indefinite** | Saved as a draft — no send date has been set |
+| **Scheduled** | A future send date/time has been assigned; not yet sent |
+| **Sent** | The notification has been dispatched to the target segment |
+| **Suspended** | The notification has been paused and will not send |
+
+### Searching and Filtering
+
+Use the **search bar** to find a notification by name. Use the **filter panel** to narrow the list by:
+- Associated segment
+- Creation date range
+- Send date range
+- Status
+
+---
+
+## Notification Types
+
+Before creating a notification, understand how the different delivery channels work together:
+
+<CardGroup cols={3}>
+  <Card title="Push Notification" icon="bell">
+    Delivered to the user's device lock screen or notification tray via Apple Push Notification Service (APNs) or Google Mobile Services (GMS). Always accompanied by an in-app message.
+  </Card>
+  <Card title="In-App Message" icon="mobile">
+    Appears inside the MyEdenred app in the user's notification inbox. Created automatically whenever you create a push notification — the two are always paired.
+  </Card>
+  <Card title="Email" icon="envelope">
+    Sent directly to the user's registered email address. Two templates are available: **Advertising** (includes an unsubscribe link) and **Service** (no unsubscribe link). Email is rarely used in the Backoffice — Edenred has a dedicated external email marketing platform for bulk campaigns.
+  </Card>
+</CardGroup>
+
+<Note>
+  Push notifications and in-app messages are always created as a pair. You cannot send a push notification without also creating the corresponding in-app message. The title and body you enter apply to both.
+</Note>
+
+---
+
+## Creating a Notification
+
+<Steps>
+  <Step title="Open the creation form">
+    From the Notifications list, click **Create New**. The notification creation modal opens.
+  </Step>
+  <Step title="Enter the campaign name">
+    Give the notification an internal name that clearly identifies the campaign (for example, *Summer Perks Launch – July 2025*). This name is only visible to Backoffice operators — users never see it.
+  </Step>
+  <Step title="Select the notification type">
+    Choose one or more delivery channels:
+    - **Push + In-App** — the standard option for most campaigns. Selecting Push automatically includes In-App.
+    - **In-App only** — delivers only to the in-app notification inbox, without a device push alert.
+    - **Email** — select the appropriate template (Advertising or Service).
+  </Step>
+  <Step title="Write the title and message body">
+    Enter the notification **Title** and **Message** in plain text. There is no image support for push and in-app messages — text only.
+
+    | Field | Limit |
+    |---|---|
+    | **Title** | Up to 255 characters (note: push notifications display fewer characters on-screen than in-app messages depending on the device) |
+    | **Message body** | Plain text; keep it concise for push notifications where screen space is limited |
+
+    <Tip>
+      Write your push title to be actionable and specific. Users decide whether to open the notification based on the title alone. A title like *"20% off at Galp this weekend"* performs better than *"New promotion available"*.
+    </Tip>
+  </Step>
+  <Step title="Add an optional deep link">
+    If you want the notification to take users to a specific location when they tap it, enter a **deep link** or an **external URL**.
+
+    - **Deep link** — directs the user to a specific screen within the MyEdenred app (for example, the Perks section, the user's balance, or the Where to Use map). Use the deep link generator in the Content module to get the correct link format.
+    - **External URL** — opens a webpage in the device browser.
+
+    If no link is provided, tapping the notification simply opens the app home screen.
+  </Step>
+  <Step title="Select the target segment">
+    Choose the segment that defines which users will receive this notification. All segments you have previously created appear in the dropdown. If the correct segment does not yet exist, save this notification as a draft (Indefinite) and create the segment first.
+
+    <Note>
+      The recipient count shown in the segment dropdown reflects the last processed count for that segment. If the segment was recently edited, it may still be processing and the count may not yet be final.
+    </Note>
+  </Step>
+  <Step title="Set the send schedule">
+    Choose when the notification should be delivered:
+
+    | Option | Behaviour |
+    |---|---|
+    | **Send immediately** | Dispatches the notification as soon as you publish it |
+    | **Schedule** | Set a specific future date and time for delivery |
+    | **Indefinite** | Saves the notification as a draft with no send date |
+
+    <Warning>
+      Sending to a large segment (particularly one that includes users with a broad marketing opt-in) can take many hours to process — in some cases up to 12 hours from the scheduled send time. For time-sensitive campaigns, schedule delivery well in advance or verify the expected segment size before sending immediately.
+    </Warning>
+  </Step>
+  <Step title="Review and publish">
+    Review all notification details — title, message, deep link, segment, and send time. When you are satisfied, click **Publish**. The notification status changes to **Scheduled** (if a future time was set) or begins sending immediately.
+  </Step>
+</Steps>
+
+---
+
+## Notification Detail
+
+Click any notification name in the list to open its detail view. The detail page shows:
+
+- **Status**, **creation date**, and **send date/time**
+- **Campaign name** and **selected segment**
+- **Total users notified** — the number of users in the segment at the time of sending
+- **Notification type** — push, in-app, email, or a combination
+- **Title** and **message body**
+- **Deep link or external URL** (if set)
+
+Use this view to audit a sent campaign and verify delivery details.
+
+---
+
+## Editing a Notification
+
+You can edit a notification as long as it has not yet been sent.
+
+<Steps>
+  <Step title="Open the notification detail">
+    Click the notification you want to edit.
+  </Step>
+  <Step title="Click Edit">
+    Select the **Edit** action. All fields reopen for editing except the **creation date**, which is read-only.
+  </Step>
+  <Step title="Make your changes">
+    Update the title, message, deep link, target segment, or scheduled send time as needed.
+  </Step>
+  <Step title="Save">
+    Click **Save** to apply your changes.
+  </Step>
+</Steps>
+
+<Warning>
+  Notifications with a status of **Sent** cannot be edited. Once a notification has been dispatched it is a permanent record. If you need to correct information or re-send, duplicate the notification and create a new campaign instead.
+</Warning>
+
+---
+
+## Duplicating a Notification
+
+The **Copy** action creates a new notification pre-filled with all the settings of an existing one. Use this to build a new campaign based on a previous notification — for example, a recurring monthly update or a seasonal variation of a successful campaign.
+
+<Steps>
+  <Step title="Open the notification detail">
+    Click the notification you want to use as a template.
+  </Step>
+  <Step title="Click Copy">
+    Select the **Copy** action. A new notification is created in **Indefinite** (draft) status with all the same content.
+  </Step>
+  <Step title="Update and publish">
+    Edit the duplicated notification — at minimum, update the campaign name and adjust the send date — then publish when ready.
+  </Step>
+</Steps>
+
+---
+
+## Deep Links in Notifications
+
+Deep links let you send users directly to a specific section of the MyEdenred app when they tap a notification. The following destinations are available:
+
+| Destination | Description |
+|---|---|
+| **My Benefits** (Os Meus Benefícios) | The app home screen showing the user's active products |
+| **Where to Use** (Onde Utilizar) | The merchant map and search screen |
+| **Perks** (Vantagens) | The Edenred partner perks and discounts catalogue |
+| **Notifications** | The user's in-app notification inbox |
+| **Profile** | The user's account and settings screen |
+
+You can also enter any external URL to open a webpage in the device browser.
+
+<Tip>
+  Use the **Deep Links** tool in the Content module to generate a correctly formatted deep link string before adding it to your notification. Manually typed deep links may not resolve correctly on all devices.
+</Tip>
+
+---
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Target precisely" icon="crosshairs">
+    Always assign the most specific segment possible. Sending to the All Users segment for a product-specific promotion wastes delivery capacity and may frustrate users who hold different products.
+  </Card>
+  <Card title="Use opt-in segments for marketing" icon="check-circle">
+    For promotional messages, always filter your segment to include only users who have opted in to marketing communications. Service messages (e.g., security updates) may be sent without the opt-in filter.
+  </Card>
+  <Card title="Schedule with a buffer" icon="clock">
+    For large segments, allow several hours between the scheduled send time and when you need the message to appear. Processing time scales with segment size.
+  </Card>
+  <Card title="Test with a small segment first" icon="flask">
+    For a new campaign format or a message with a deep link, create a small file-upload segment containing your own account and test the notification end-to-end before sending to the full audience.
+  </Card>
+</CardGroup>

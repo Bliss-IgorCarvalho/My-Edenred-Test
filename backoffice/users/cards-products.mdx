@@ -1,0 +1,169 @@
+---
+title: "View and Manage User Cards and Products"
+sidebarTitle: "Cards & Products"
+description: "Inspect a user's linked Edenred cards and wallets from the Backoffice, view associated users, and assist with product-related support cases."
+---
+
+From any user's profile in the Backoffice, you can inspect every Edenred product linked to their account — including cards, wallets, balances, recent transactions, and associated users. This gives you the full picture needed to diagnose product-related support cases quickly, without asking the user to send screenshots or contact other teams.
+
+<Info>
+  The Cards & Products view is available within the user profile to **Administrator**, **Administrator Call Center**, and **Call Center** roles. You access it directly from the user's detail page — there is no standalone products section in the main navigation.
+</Info>
+
+---
+
+## Products tab
+
+When you open a user's profile, navigate to the **Cards** (Cartões) tab. The tab presents all products linked to the account in a card carousel — the same layout the user sees in the MyEdenred app.
+
+### What is shown per product
+
+Each product card displays:
+
+| Field | Description |
+|---|---|
+| **Product name** | E.g. Cartão Refeição, Cartão Flexível, Wallet Creche, Wallet Educação |
+| **Product type** | Card (physical, backed by Novo Banco) or Wallet (digital, backed by Paytec) |
+| **Card number / Wallet ID** | 16-digit number for cards; alphanumeric ID for wallets |
+| **Status** | Active or Blocked |
+| **Current balance** | Live balance pulled from the respective backend system |
+
+<Note>
+  Balance and status data is retrieved in real time from the backend systems (Novo Banco for cards, Paytec for wallets). If a balance appears stale or inconsistent, the issue lies upstream — the Backoffice displays what the backend returns.
+</Note>
+
+---
+
+## Actions you can take on a product
+
+<Tabs>
+  <Tab title="View details and balance">
+    Click a product card to open its full detail view. You can see:
+
+    - Product name, type, and identifier
+    - Current balance
+    - Account status (active or blocked)
+    - Whether the product is a Card or Wallet
+
+    This information is read-only — you cannot change product attributes such as the card number or wallet ID.
+  </Tab>
+  <Tab title="View recent transactions">
+    Within the product detail, open the **Movements** tab to see the user's recent transaction history for that product. Each entry shows:
+
+    - **Date and time** of the transaction
+    - **Merchant name** or description
+    - **Amount** (debit or credit)
+    - **Transaction status**
+
+    Use this view to verify whether a specific payment went through, identify unexpected charges, or confirm a balance top-up was received. Transaction data is fetched directly from Novo Banco (cards) or Paytec (wallets).
+
+    <Note>
+      You are viewing the transaction history in a read-only, support context. You cannot reverse, void, or dispute transactions from the Backoffice. Financial operations must be escalated to Edenred's operations team.
+    </Note>
+  </Tab>
+  <Tab title="Block or unblock a card">
+    If a user reports a lost card or a suspicious transaction, you can block the product directly from the Backoffice:
+
+    <Steps>
+      <Step title="Open the product">
+        From the user's **Cards** tab, click the product you want to act on.
+      </Step>
+      <Step title="Select Block or Unblock">
+        Use the **Block** or **Unblock** action button on the product detail screen.
+      </Step>
+      <Step title="Confirm the action">
+        Confirm your intent in the confirmation dialog. The status change is sent immediately to Novo Banco (for cards) or Paytec (for wallets) and takes effect in real time — the product cannot be used for transactions while blocked.
+      </Step>
+    </Steps>
+
+    <Warning>
+      Blocking a card is a real financial action. It immediately prevents the user from making any purchases with that card or wallet until you or the user unblocks it. Only block a product when there is a clear support reason to do so.
+    </Warning>
+
+    <Info>
+      Whether a block applied from the Backoffice is visually distinguished from a block applied by the user themselves in the app is currently under review. When in doubt, confirm the block status with the user.
+    </Info>
+  </Tab>
+  <Tab title="Remove a product">
+    You can remove (unlink) a product from a user's account. The typical use case is when a user has created a new MyEdenred account and needs the product removed from their old account before they can add it to the new one.
+
+    <Steps>
+      <Step title="Open the product">
+        Navigate to the product in the **Cards** tab.
+      </Step>
+      <Step title="Select Remove">
+        Click the **Remove** action.
+      </Step>
+      <Step title="Confirm">
+        Confirm the removal. The product is immediately unlinked from the account. The physical card or wallet itself is not affected — it can be added to another account.
+      </Step>
+    </Steps>
+
+    <Warning>
+      Removing a product from an account is immediate and cannot be undone from the Backoffice. The user will need to go through the product-addition flow again on their current account. Confirm with the user before proceeding.
+    </Warning>
+  </Tab>
+</Tabs>
+
+---
+
+## Associated users
+
+Some Edenred cards support an **associated user** (second account holder) — a person who has been granted read-only access to the primary user's card, typically a family member who wants to monitor the card balance. Wallets do not support associated users.
+
+### Viewing associated users
+
+Within a card's detail view, open the **Associated Users** tab. The list shows every person who currently has access to that card, including:
+
+- Their **name** and **email**
+- Their **access level** (always read-only for associated users)
+- The **date** they were added
+
+### Removing an associated user
+
+If a user requests that an associated user be removed — for example, after a family situation changes — you can do this directly from the Backoffice:
+
+<Steps>
+  <Step title="Open the card">
+    Navigate to the relevant card in the user's **Cards** tab.
+  </Step>
+  <Step title="Go to Associated Users">
+    Open the **Associated Users** tab within the card detail.
+  </Step>
+  <Step title="Remove the user">
+    Click **Remove** next to the associated user you want to unlink, then confirm the action.
+  </Step>
+</Steps>
+
+<Note>
+  The Backoffice allows you to view existing associated users and remove them. You cannot add new associated users on behalf of a cardholder — the primary account holder must do this themselves through the MyEdenred app.
+</Note>
+
+---
+
+## What support staff cannot do
+
+There are deliberate boundaries on what the Backoffice can do with products. The following operations are **not available** to Backoffice operators:
+
+- **Initiate payments** on behalf of a user — you cannot make purchases or transfers using a user's card or wallet
+- **Change a PIN** — PIN management is performed exclusively by the card holder within the MyEdenred app; the Backoffice has no access to PIN data
+- **Process financial operations** — loading benefits, transferring balances, or reversing transactions are handled by Edenred's backend systems and must be escalated through the appropriate internal process
+
+<Warning>
+  Never attempt to work around these boundaries. If a user requests a financial operation that requires backend access, open a ticket with Edenred's operations team and inform the user of the expected resolution timeline.
+</Warning>
+
+---
+
+## Backend systems and financial operations
+
+The Backoffice shows product status and balance as reported by the underlying financial platforms — it does not process any financial operations itself.
+
+| Product category | Backend system | What the Backoffice can do |
+|---|---|---|
+| **Cards** (Cartão Refeição, Cartão Flexível) | Novo Banco | View balance, view transactions, block/unblock, remove from account |
+| **Wallets** (Wallet Creche, Wallet Educação) | Paytec | View balance, view transactions, block/unblock, remove from account |
+
+<Info>
+  If a user reports an issue with benefit loading (credits not arriving on a card or wallet), this is managed by the employer's client portal and Edenred's operations team — not the MyEdenred Backoffice. Direct the user to contact Edenred Customer Support through the official support channel, or escalate internally if you are already on the support team.
+</Info>

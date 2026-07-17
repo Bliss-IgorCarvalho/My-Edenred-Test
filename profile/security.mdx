@@ -1,0 +1,117 @@
+---
+title: "Secure Your MyEdenred Account"
+sidebarTitle: "Security"
+description: "Change your password, set up PIN and biometric unlock, and manage multi-factor authentication settings in MyEdenred."
+---
+
+MyEdenred protects your account with multiple layers of security: a strong password for initial login, multi-factor authentication (MFA) to periodically re-verify your identity, and a device-level PIN or biometric unlock so you can open the app quickly without entering your full credentials every time. Understanding how these layers work together helps you stay in control of your account.
+
+## Changing Your Password
+
+You can update your password at any time from your profile. You'll need to know your current password to authorise the change — no additional SMS or email confirmation is required.
+
+<Steps>
+  <Step title="Go to Profile → Change Password">
+    Open your profile and tap **Change Password**.
+  </Step>
+  <Step title="Enter your current password">
+    Type your existing password to confirm your identity.
+  </Step>
+  <Step title="Enter and confirm your new password">
+    Type your new password, then type it again to confirm. The same complexity rules that applied when you registered apply here.
+  </Step>
+  <Step title="Save the change">
+    Tap **Save**. A confirmation message appears when the change is successful.
+  </Step>
+</Steps>
+
+<Warning>
+  When you change your password, **all active sessions on other devices are immediately invalidated**. Anyone logged in to your account on another device will be signed out and required to log in again with the new password. Your current session on the device where you made the change remains active.
+</Warning>
+
+## PIN Unlock
+
+The app uses its own 4-digit numeric PIN — separate from your device's lock-screen PIN — to protect access between sessions. Setting up a PIN is **required**; you are prompted to create one at the end of the onboarding flow.
+
+### How PIN Unlock Works
+
+Once your PIN is set, you can open the app by entering it instead of typing your full email and password every time. Your mobile session stays alive in the background — it does not expire due to inactivity — and the PIN is the gate that controls local access.
+
+### Setting or Changing Your PIN
+
+<Steps>
+  <Step title="Open Settings">
+    Navigate to **Preferences → Settings** in the app.
+  </Step>
+  <Step title="Select PIN">
+    Tap the PIN option to enter the PIN management screen.
+  </Step>
+  <Step title="Enter your new PIN twice">
+    Type your chosen 4-digit PIN, then type it again to confirm.
+  </Step>
+  <Step title="PIN saved">
+    Your new PIN is active immediately for the next time you open the app.
+  </Step>
+</Steps>
+
+<Note>
+  If you forget your PIN, select **"Forgot my code"** on the unlock screen. This ends your current session and requires you to log in again with your email and password. After logging in, you'll be prompted to set a new PIN.
+</Note>
+
+## Biometric Unlock
+
+For even faster access, you can enable biometric authentication as an optional shortcut on top of your PIN.
+
+<Tabs>
+  <Tab title="iOS">
+    MyEdenred supports **Face ID** and **Touch ID** on compatible iPhone models. Your device must have Face ID or Touch ID configured in iOS Settings before you can enable it in the app.
+  </Tab>
+  <Tab title="Android">
+    MyEdenred supports **fingerprint** authentication on Android devices. Your device must have a fingerprint registered in Android Settings before you can enable it in the app.
+  </Tab>
+</Tabs>
+
+### Enabling or Disabling Biometrics
+
+Go to **Preferences → Settings** and toggle biometric unlock on or off. You can change this setting at any time.
+
+<Info>
+  Biometric unlock is **device-specific** — enabling it on your phone does not affect access on any other device, including the web portal. If biometric authentication fails or is unavailable (for example, after several failed attempts), the app automatically falls back to your PIN.
+</Info>
+
+<Tip>
+  Enable biometric unlock for the fastest and most secure way to open the app — you get strong protection without the friction of typing a code every time.
+</Tip>
+
+## Session Management and MFA
+
+Understanding how sessions work across mobile and web helps you know when you'll be asked to re-authenticate.
+
+<CardGroup cols={2}>
+  <Card title="Mobile App" icon="mobile">
+    Your mobile session **never expires due to inactivity**. The PIN or biometric lock protects the app locally. MFA (SMS one-time password) is required once every **180 days** to re-verify your identity, even if you haven't logged out.
+  </Card>
+  <Card title="Web Portal" icon="browser">
+    Web sessions expire automatically after **60 minutes of inactivity**, redirecting you to the login screen. MFA (email one-time password) is required at each new session, or every **90 days** if you choose to trust your browser.
+  </Card>
+</CardGroup>
+
+## Logging Out
+
+Logging out explicitly ends your session and removes local PIN/biometric access, requiring a full login with your email and password the next time you open the app.
+
+<Steps>
+  <Step title="Open your profile">
+    Tap the profile icon or navigate to **Profile**.
+  </Step>
+  <Step title="Tap 'Sign Out'">
+    Select **Sign Out** (or **Terminar sessão**) at the bottom of the profile screen.
+  </Step>
+  <Step title="Confirm">
+    Confirm the action. You are immediately redirected to the login screen, and your PIN/biometric unlock is invalidated until you log back in.
+  </Step>
+</Steps>
+
+<Note>
+  Logging out from one device does **not** affect your sessions on other devices. Each device maintains its own session. To revoke access on all devices at once, change your password — this invalidates all other active sessions immediately.
+</Note>

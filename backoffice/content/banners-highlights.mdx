@@ -1,0 +1,185 @@
+---
+title: "Manage Highlight Banners and Pop-up Messages"
+sidebarTitle: "Banners & Highlights"
+description: "Create and schedule the homepage banner carousel and pop-up messages shown to MyEdenred users in the app and web portal."
+---
+
+The Highlights and Pop-ups sections of the Backoffice give you direct control over the most prominent visual content in the MyEdenred app. Highlights power the banner carousel displayed on the user's home screen in the **My Benefits** (Os Meus Benefícios) area, while pop-ups deliver targeted messages the moment a user opens a specific screen. Together, these tools let you promote campaigns, announce product changes, and direct users to key features — without requiring a new app release.
+
+## Access
+
+The Highlights and Pop-ups modules are available to users with the **Administrator** or **Marketing** role.
+
+---
+
+## Highlights (Banner Carousel)
+
+The Highlights section manages the banner carousel shown at the top of the My Benefits screen. Up to **3–4 banners** can be active simultaneously, rotating as a carousel for the user to swipe through.
+
+### Highlight States
+
+Banners exist in one of two states:
+
+| State | Description |
+|---|---|
+| **Published** | The banner is live and visible to all users in the carousel |
+| **Saved** (Suspended) | The banner is saved in the Backoffice but not shown to users |
+
+### Creating a New Banner
+
+<Steps>
+  <Step title="Navigate to Highlights">
+    Go to **Content → Highlights** in the Backoffice sidebar.
+  </Step>
+  <Step title="Click Create">
+    Select **Create New Highlight**. The creation form opens.
+  </Step>
+  <Step title="Enter the banner content">
+    Fill in the following fields:
+
+    | Field | Description |
+    |---|---|
+    | **Title** | The primary headline displayed on the banner |
+    | **Description** | A short supporting text shown below the title |
+    | **Image** | Upload the banner image. Follow the recommended dimensions shown in the upload panel to avoid cropping or distortion |
+    | **Link** | Optional. Add a deep link (to a specific app screen) or an external URL to make the banner tappable |
+  </Step>
+  <Step title="Choose a design layout">
+    Select how the image is positioned relative to the text: **image left**, **image centre**, or **image right**. You can also configure the background colour and element colours to match your campaign branding.
+  </Step>
+  <Step title="Set the display status">
+    Choose whether to **Publish** the banner immediately or **Save** it (keep it suspended) for later activation.
+  </Step>
+  <Step title="Save">
+    Click **Save**. Published banners appear in the carousel immediately. Saved banners are stored in the **Saved Highlights** section of the list.
+  </Step>
+</Steps>
+
+### Managing Existing Banners
+
+From the Highlights list you can take the following actions on any banner:
+
+<CardGroup cols={2}>
+  <Card title="Edit" icon="pencil">
+    Update any field — title, description, image, link, layout, or colours. Changes to published banners appear in the app immediately after saving.
+  </Card>
+  <Card title="Suspend" icon="pause">
+    Move a published banner to the Saved state without deleting it. Use this to temporarily remove a banner during off-campaign periods and reactivate it later.
+  </Card>
+  <Card title="Duplicate" icon="copy">
+    Create a copy of a banner as the starting point for a new campaign. The duplicate is created in Saved state so you can edit it before publishing.
+  </Card>
+  <Card title="Delete" icon="trash">
+    Permanently remove a banner. This action cannot be undone. Suspend the banner instead if you may need it again.
+  </Card>
+</CardGroup>
+
+<Note>
+  The Highlights feature is currently **disabled in the production environment**. The capability exists in the Backoffice and is fully manageable, but banners are not displayed to end users until the feature is re-enabled. A planned update will reactivate Highlights with added segmentation support, allowing you to target banners to specific user groups.
+</Note>
+
+---
+
+## Pop-ups
+
+Pop-up messages appear as overlay dialogs when a user opens a specific screen in the MyEdenred app. You can configure a different pop-up for each available screen, on web, mobile, or both channels simultaneously.
+
+### Available Screens
+
+You can assign pop-ups to the following app screens:
+
+- **Login**
+- **My Benefits** (Os Meus Benefícios — home screen)
+- **Where to Use** (Onde Utilizar)
+- **Perks** (Vantagens)
+- **Profile**
+- **Points**
+- **Notifications**
+
+The pop-ups overview grid shows each screen with a count of how many saved pop-ups exist for it.
+
+### Pop-up States
+
+| State | Description |
+|---|---|
+| **Published** | The pop-up is live. When a user opens the assigned screen, they see this pop-up according to the display rule |
+| **Saved** (Suspended/Draft) | The pop-up is configured but not shown to users |
+
+Only one pop-up can be **published** per screen at a time. Additional configured pop-ups for the same screen remain in the Saved section until the published one is suspended.
+
+### Creating a Pop-up
+
+<Steps>
+  <Step title="Select the target screen">
+    From the pop-ups grid, click the screen where you want the pop-up to appear (for example, **My Benefits** for a home-screen announcement).
+  </Step>
+  <Step title="Click Create">
+    Select **Create New Pop-up** within that screen's section.
+  </Step>
+  <Step title="Set the channel">
+    Choose whether this pop-up should appear on **Mobile**, **Web**, or **Both**. If you select Both, you can reuse the same content configuration for both channels after saving.
+  </Step>
+  <Step title="Enter pop-up content">
+    Fill in the pop-up details:
+
+    | Field | Description |
+    |---|---|
+    | **Title** | The headline of the pop-up dialog |
+    | **Description** | The main body text of the message |
+    | **Image** | Optional. Upload a supporting image displayed inside the pop-up |
+    | **Button label and link** | Optional. Add a call-to-action button with a deep link or external URL |
+  </Step>
+  <Step title="Set the display rule">
+    Choose how often the pop-up appears to each user:
+
+    | Rule | Behaviour |
+    |---|---|
+    | **Show once** | The pop-up appears once per user session and is not shown again after the user dismisses it |
+    | **Do not show again** | The pop-up appears once per user and is permanently dismissed after the first view |
+  </Step>
+  <Step title="Publish or save">
+    Click **Publish** to make the pop-up live immediately, or **Save** to keep it as a draft for later activation.
+  </Step>
+</Steps>
+
+### Managing Existing Pop-ups
+
+From any screen's pop-up section you can:
+
+- **Edit** — update content, channel, or display rule on any saved or published pop-up
+- **Suspend** — move a published pop-up to Saved state to stop showing it without deleting
+- **Duplicate** — copy a pop-up (including its content) to another screen by changing the target screen destination
+- **Delete** — permanently remove a pop-up
+
+<Warning>
+  Use pop-ups only for important or time-sensitive announcements. Pop-ups interrupt the user's flow and are easy to dismiss. Overusing them — for example, showing a pop-up on every screen — will train users to dismiss them without reading. Reserve pop-ups for high-priority messages such as T&C updates, major feature launches, or critical service notices.
+</Warning>
+
+---
+
+## Deep Links
+
+The Deep Links tool generates correctly formatted link strings that direct users to a specific screen inside the MyEdenred app. Deep links are used across Highlights banners, pop-ups, and push notifications, so understanding how they work is important for all three features.
+
+### Generating a Deep Link
+
+<Steps>
+  <Step title="Navigate to Deep Links">
+    Go to **Content → Deep Links** in the Backoffice sidebar.
+  </Step>
+  <Step title="Select the destination screen">
+    Use the dropdown to choose the internal app screen you want to link to:
+    - My Benefits (Os Meus Benefícios)
+    - Where to Use (Onde Utilizar)
+    - Perks (Vantagens)
+    - Notifications
+    - Profile
+  </Step>
+  <Step title="Copy the generated link">
+    The system generates and displays the deep link string. Click **Copy** and paste it into the link field of your banner, pop-up, or notification.
+  </Step>
+</Steps>
+
+<Note>
+  Always generate deep links using this tool rather than typing them manually. Manually entered deep link strings may resolve inconsistently — particularly on web — and could result in a broken experience for users.
+</Note>
